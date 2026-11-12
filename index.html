@@ -156,13 +156,11 @@ footer{text-align:center;font-size:13px;margin-top:30px}
 <div class="card stay" style="background:#EEF7FB">
 <h3>四面 LALA VIANCO</h3>
 <p>12/9 – 12/11（第 1、2 晚）</p>
-<span class="price">3,550 台幣</span>
 <p>12/7 前可取消</p>
 </div>
 <div class="card stay" style="background:#F1F8EC">
 <h3>廣安里 광안비치스테이 GYM&amp;Spa</h3>
 <p>12/11 – 12/13（第 3、4 晚）</p>
-<span class="price">5,823 台幣</span>
 <p>12/7 前可取消</p>
 </div>
 </section>
@@ -202,7 +200,7 @@ const days=[
 {tm:"上午",n:"好吃早午餐",ic:"bread",tags:[["美食","eat"]]},
 {tm:"中午",n:"五六島天空步道",must:1,ic:"bridge",tags:[["必去","must"],["步行","walk"]]},
 {tm:"下午",n:"Arte Museum",ic:"art",tags:[["展覽","walk"]]},
-{tm:"下午",n:"空間時間",note:"採買或補行程",ic:"clock",tags:[["彈性","walk"]]},
+{tm:"下午",n:"空閒時間",note:"採買或補行程",ic:"clock",tags:[["彈性","walk"]]},
 {tm:"18:30",n:"出發去機場",ic:"bus",tags:[["交通","metro"]]},
 {tm:"22:00–23:50",n:"濟州航空 返回台灣",ic:"plane",tags:[["飛機","fly"]]}]}
 ];
@@ -263,7 +261,7 @@ const target=new Date("2026-12-09T12:15:00+08:00");
 function tick(){const ms=target-new Date();
  if(ms<=0){["d","h","m"].forEach(k=>$("cd-"+k).textContent="0");$("cdmsg").textContent="旅程開始囉，玩得開心！";return}
  const m=Math.floor(ms/6e4);$("cd-d").textContent=Math.floor(m/1440);$("cd-h").textContent=Math.floor(m%1440/60);$("cd-m").textContent=m%60;
- $("cdmsg").textContent="距離出發還有 "+Math.ceil(ms/864e5)+" 天，加油準備！"}
+ $("cdmsg").textContent="距離出發還有 "+Math.ceil(ms/864e5)+" 天，社畜放假倒數！"}
 tick();setInterval(tick,30000);
 </script>
 </body>
